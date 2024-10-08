@@ -1,6 +1,7 @@
 "use client";
 import { useState, FormEvent, ChangeEvent } from 'react';
 import ReactMarkdown from 'react-markdown';
+import Image from 'next/image';
 
 export default function Home() {
   // State for the password and inputs
@@ -78,7 +79,13 @@ export default function Home() {
   return (
     <div className="flex flex-col items-center">
       <div className="flex flex-row items-start w-full max-w-6xl">
-        <img src="/profile-picture.jpg" className="w-1/6 pt-20 min-w-[150px] object-cover cursor-grab" alt="Profile" />
+        <Image
+          src="/profile-picture.jpg"
+          alt="Profile"
+          width={150}
+          height={150}
+          className="pt-20 object-cover cursor-grab"
+        />
         <div className="px-8 py-16 flex-grow">
           <div
             className="h-[250px] w-full outline rounded-md p-2 overflow-y-auto bg-white"
