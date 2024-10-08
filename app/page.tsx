@@ -1,20 +1,18 @@
-// @ts-nocheck
-
 "use client";
-import { useState } from 'react';
+import { useState, FormEvent, ChangeEvent } from 'react';
 import ReactMarkdown from 'react-markdown';
 
 export default function Home() {
   // State for the password and inputs
-  const [password, setPassword] = useState('');
-  const [isAuthenticated, setIsAuthenticated] = useState(false);
-  const [inputValue1, setInputValue1] = useState(''); // For the response
-  const [inputValue2, setInputValue2] = useState(''); // For the user's prompt
-  const [loading, setLoading] = useState(false);
+  const [password, setPassword] = useState<string>('');
+  const [isAuthenticated, setIsAuthenticated] = useState<boolean>(false);
+  const [inputValue1, setInputValue1] = useState<string>(''); // For the response
+  const [inputValue2, setInputValue2] = useState<string>(''); // For the user's prompt
+  const [loading, setLoading] = useState<boolean>(false);
 
-  const correctPassword = process.env.NEXT_PUBLIC_PASSWORD!; // Set your password here
+  const correctPassword: string = process.env.NEXT_PUBLIC_PASSWORD as string; // Set your password here
 
-  const handlePasswordSubmit = (e) => {
+  const handlePasswordSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (password === correctPassword) {
       setIsAuthenticated(true);
@@ -23,7 +21,7 @@ export default function Home() {
     }
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault(); // Prevent default form submission
     setLoading(true);
 
@@ -62,7 +60,7 @@ export default function Home() {
             className="outline rounded-md p-2 mb-2"
             type="password"
             value={password}
-            onChange={(e) => setPassword(e.target.value)}
+            onChange={(e: ChangeEvent<HTMLInputElement>) => setPassword(e.target.value)}
             placeholder="Enter password"
             required
           />
@@ -96,7 +94,7 @@ export default function Home() {
             className="w-full outline rounded-md p-2"
             type="text"
             value={inputValue2}
-            onChange={(e) => setInputValue2(e.target.value)}
+            onChange={(e: ChangeEvent<HTMLInputElement>) => setInputValue2(e.target.value)}
             placeholder="Type your message..."
             required
           />
