@@ -95,7 +95,7 @@ export default function Home() {
         </div>
       </div>
       <div className="w-full max-w-6xl px-8">
-        <h1 className="text-lg font-semibold">Speak to gooberGPT :3</h1>
+        <h1 className="text-lg font-semibold">Speak to goober :3</h1>
         <form onSubmit={handleSubmit} className="flex flex-row items-center space-x-2">
           <input
             className="w-full outline rounded-md p-2"

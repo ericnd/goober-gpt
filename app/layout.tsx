@@ -15,7 +15,7 @@ const geistMono = localFont({
 
 export const metadata: Metadata = {
   title: "gooberGPT",
-  description: "Speak to silly goober!",
+  description: "Speak to a silly goober!",
 };
 
 export default function RootLayout({
