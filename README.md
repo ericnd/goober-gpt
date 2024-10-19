@@ -8,7 +8,6 @@ But if you want to try it you can just clone the project or contact me!
 ```bash
 npm run dev
 ```
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 ![alt text](https://i.imgur.com/LQ0aEVk.png)
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
