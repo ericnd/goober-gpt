@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useRef, FormEvent, ChangeEvent } from "react";
+import { useState, useRef, FormEvent, ChangeEvent } from "react";
 import { motion } from "framer-motion";
 import ReactMarkdown from "react-markdown";
 import Image from "next/image";
