@@ -10,4 +10,4 @@ npm run dev
 ```
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-![alt text](https://i.imgur.com/LQ0aEVk.png)
+![alt text](https://i.imgur.com/9zln0yi.png)
