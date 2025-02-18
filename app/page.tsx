@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useRef, FormEvent, ChangeEvent } from "react";
+import { useState, useRef, useEffect, FormEvent, ChangeEvent } from "react";
 import { motion } from "framer-motion";
 import ReactMarkdown from "react-markdown";
 import Image from "next/image";
@@ -15,6 +15,10 @@ export default function Home() {
   const chatEndRef = useRef<HTMLDivElement>(null);
 
   const correctPassword: string = process.env.NEXT_PUBLIC_PASSWORD as string;
+
+  useEffect(() => {
+    chatEndRef.current?.scrollIntoView({ behavior: "smooth" });
+  }, [messages]);
 
   const handlePasswordSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
